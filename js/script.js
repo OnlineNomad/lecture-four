@@ -39,11 +39,14 @@ function newObjCreator(...obj) {
     return newObj;
 }
 
+function cityFinder(usrObj) {
+    const {fullName, banks: {bankThree: {address: { city }}}} = usrObj;
+    return city;
+}
 
 
 console.log(fn(1,2,3,4,5, 6)); // TASK ONE
-
-const {fullName, banks: {bankThree: {address: { city }}}} = user
-console.log(city); // TASK TWO
-
+console.log('-----------------------------------')
+console.log(cityFinder(user)); // TASK TWO
+console.log('-----------------------------------')
 console.log(newObjCreator(user, user2)); // TASK THREE
